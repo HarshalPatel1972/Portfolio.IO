@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+/* Base theme variables */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --accent: #0070f3;
+  --glow-color: rgba(0, 255, 255, 0.6);
+  --glow-subtle-color: rgba(0, 255, 255, 0.2);
+  --grid-color: rgba(20, 184, 166, 0.1);
+  --terminal-bg: rgba(18, 18, 18, 0.8);
+  --terminal-text: #00ff00;
+  --border-color: rgba(82, 82, 82, 0.3);
+}
+
+/* Dark org theme */
+.dark-org {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --accent: #0099ff;
+  --glow-color: rgba(0, 255, 255, 0.6);
+  --glow-subtle-color: rgba(0, 255, 255, 0.2);
+  --grid-color: rgba(20, 184, 166, 0.1);
+  --terminal-bg: rgba(18, 18, 18, 0.8);
+  --terminal-text: #00ff00;
+  --border-color: rgba(82, 82, 82, 0.3);
+}
+
+/* Light theme */
+.light {
+  --background: #f9fafb;
+  --foreground: #111827;
+  --accent: #2563eb;
+  --glow-color: rgba(37, 99, 235, 0.5);
+  --glow-subtle-color: rgba(37, 99, 235, 0.2);
+  --grid-color: rgba(59, 130, 246, 0.1);
+  --terminal-bg: rgba(243, 244, 246, 0.9);
+  --terminal-text: #047857;
+  --border-color: rgba(209, 213, 219, 0.8);
+}
+
+/* Gruvbox theme */
+.gruvbox {
+  --background: #282828;
+  --foreground: #ebdbb2;
+  --accent: #b8bb26;
+  --glow-color: rgba(184, 187, 38, 0.5);
+  --glow-subtle-color: rgba(184, 187, 38, 0.2);
+  --grid-color: rgba(168, 153, 132, 0.1);
+  --terminal-bg: rgba(40, 40, 40, 0.9);
+  --terminal-text: #b8bb26;
+  --border-color: rgba(146, 131, 116, 0.5);
+}
+
+/* Monokai theme */
+.monokai {
+  --background: #272822;
+  --foreground: #f8f8f2;
+  --accent: #f92672;
+  --glow-color: rgba(249, 38, 114, 0.5);
+  --glow-subtle-color: rgba(249, 38, 114, 0.2);
+  --grid-color: rgba(166, 226, 46, 0.1);
+  --terminal-bg: rgba(39, 40, 34, 0.9);
+  --terminal-text: #a6e22e;
+  --border-color: rgba(73, 72, 62, 0.6);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Dashboard styling */
+.dashboard-active {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Glowing elements */
+.glow {
+  box-shadow: 0 0 15px var(--glow-color);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow:hover {
+  box-shadow: 0 0 25px var(--glow-color);
+}
+
+.glow-subtle {
+  box-shadow: 0 0 10px var(--glow-subtle-color);
+}
+
+/* Grid background pattern */
+.bg-grid-pattern {
+  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Terminal-style scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 200, 200, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.7);
+}
+
+/* Animations */
+@keyframes scanLine {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.scan-line {
+  animation: scanLine 2s linear infinite;
+}
+
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Error glitch effect */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 #ff0000;
+  }
+  20% {
+    text-shadow: -2px 0 #00ffff;
+  }
+  40% {
+    text-shadow: 2px 2px #00ff00;
+  }
+  60% {
+    text-shadow: -2px -2px #ff00ff;
+  }
+  80% {
+    text-shadow: 1px -1px #ffff00;
+  }
+  100% {
+    text-shadow: 0 0 #ffffff;
+  }
+}
+
+.glitch-text {
+  animation: glitch 0.3s linear infinite;
+  color: #ff3333;
+  opacity: 0.9;
+}
+
+/* Theme transition effect */
+html.theme-transition *,
+html.theme-transition *:before,
+html.theme-transition *:after {
+  transition: all 250ms ease-in-out !important;
+  transition-delay: 0 !important;
+}
