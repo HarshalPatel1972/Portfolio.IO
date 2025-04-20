@@ -1,17 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import ProjectsModal from "./ProjectsModal";
 
 export default function LiveStats() {
   // In a real app, these values could be fetched from an API
-  const [stats, setStats] = useState({
+  const stats = {
     projects: 12,
     mission: "Attiro",
     system: "Clove Main",
     status: "Online",
-  });
+  };
 
   // Modal state
   const [isProjectsModalOpen, setIsProjectsModalOpen] = useState(false);

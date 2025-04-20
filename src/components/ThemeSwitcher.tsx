@@ -12,7 +12,7 @@ interface ThemeOption {
 }
 
 const ThemeSwitcher = () => {
-  const { theme, setTheme, themes } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);

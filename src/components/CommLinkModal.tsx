@@ -86,7 +86,7 @@ export default function CommLinkModal({ isOpen, onClose }: CommLinkModalProps) {
             <div className="p-6 overflow-y-auto max-h-[calc(80vh-70px)]">
               <div className="mb-6 text-teal-300 text-sm">
                 <div className="mb-2 font-mono text-base">
-                  // TRANSMISSION READY
+                  {/* TRANSMISSION READY */}
                 </div>
                 <p>
                   Establish direct communication link. All channels secured and
