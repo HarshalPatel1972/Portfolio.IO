@@ -7,86 +7,72 @@ import { motion, AnimatePresence } from "framer-motion";
 const sampleProjects = [
   {
     id: 1,
-    name: "Attiro Platform",
+    name: "Sitara",
     status: "deployed",
-    lastUpdated: "2025-04-15T14:30:00Z",
+    lastUpdated: "2024-10-11T16:00:00Z",
     priority: "high",
   },
   {
     id: 2,
-    name: "SmartStock",
-    status: "deployed",
-    lastUpdated: "2025-04-12T09:15:00Z",
-    priority: "medium",
+    name: "MedChain Authenticator",
+    status: "in progress",
+    lastUpdated: "2025-02-26T15:45:00Z",
+    priority: "high",
   },
   {
     id: 3,
-    name: "Neural Interface",
+    name: "Attiro",
     status: "in progress",
-    lastUpdated: "2025-04-18T16:45:00Z",
+    lastUpdated: "2025-04-09T18:30:00Z",
     priority: "high",
   },
   {
     id: 4,
-    name: "Quantum Analyzer",
-    status: "planning",
-    lastUpdated: "2025-04-10T11:20:00Z",
-    priority: "low",
+    name: "Live Captions Research",
+    status: "in progress",
+    lastUpdated: "2025-01-18T09:15:00Z",
+    priority: "medium",
   },
   {
     id: 5,
-    name: "Clove Main",
-    status: "deployed",
-    lastUpdated: "2025-04-08T15:30:00Z",
-    priority: "high",
+    name: "FraudFence (Voice Fraud Detection)",
+    status: "planning",
+    lastUpdated: "2025-04-17T11:00:00Z",
+    priority: "medium",
   },
   {
     id: 6,
-    name: "Data Visualizer",
-    status: "in testing",
-    lastUpdated: "2025-04-17T13:25:00Z",
+    name: "WiFi Merger",
+    status: "planning",
+    lastUpdated: "2025-04-20T10:00:00Z",
     priority: "medium",
   },
   {
     id: 7,
-    name: "Security Protocol v3",
+    name: "HealthView",
     status: "deployed",
-    lastUpdated: "2025-03-30T10:15:00Z",
-    priority: "critical",
-  },
-  {
-    id: 8,
-    name: "AI Assistant",
-    status: "in progress",
-    lastUpdated: "2025-04-19T08:45:00Z",
+    lastUpdated: "2025-04-20T10:30:00Z",
     priority: "high",
   },
   {
-    id: 9,
-    name: "Task Automator",
+    id: 8,
+    name: "Handwritten Digit Recognition",
     status: "deployed",
-    lastUpdated: "2025-04-05T14:10:00Z",
+    lastUpdated: "2023-04-19T10:00:00Z",
+    priority: "low",
+  },
+  {
+    id: 9,
+    name: "Music Plagiarism Detection",
+    status: "deployed",
+    lastUpdated: "2023-09-10T10:00:00Z",
     priority: "medium",
   },
   {
     id: 10,
-    name: "Network Monitor",
+    name: "TheVSGame",
     status: "deployed",
-    lastUpdated: "2025-03-25T16:30:00Z",
-    priority: "medium",
-  },
-  {
-    id: 11,
-    name: "Client Portal",
-    status: "planning",
-    lastUpdated: "2025-04-16T11:05:00Z",
-    priority: "low",
-  },
-  {
-    id: 12,
-    name: "System Diagnostics",
-    status: "in testing",
-    lastUpdated: "2025-04-14T09:55:00Z",
+    lastUpdated: "2025-01-12T10:00:00Z",
     priority: "medium",
   },
 ];
@@ -229,9 +215,8 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
 
             <div className="p-4 border-t border-teal-900/50 flex justify-between items-center">
               <div className="text-sm text-teal-400">
-                {filteredProjects.length} project
-                {filteredProjects.length === 1 ? "" : "s"} •{" "}
-                {sampleProjects.length} total
+                Showing {filteredProjects.length} of {sampleProjects.length}{" "}
+                projects
               </div>
 
               <button

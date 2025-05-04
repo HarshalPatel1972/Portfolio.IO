@@ -5,13 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Sample system logs data
 const systemLogsData = [
-  {
-    id: 1,
-    timestamp: "2025-04-20T10:15:23Z",
-    category: "system",
-    level: "info",
-    message: "Portfolio system initialization complete",
-  },
+  // {
+  //   id: 1,
+  //   timestamp: "2025-04-20T10:15:23Z",
+  //   category: "system",
+  //   level: "info",
+  //   message: "Portfolio system initialization complete",
+  // },
   {
     id: 2,
     timestamp: "2025-04-20T10:15:24Z",
@@ -26,13 +26,13 @@ const systemLogsData = [
     level: "info",
     message: "API endpoints registered successfully",
   },
-  {
-    id: 4,
-    timestamp: "2025-04-20T10:16:02Z",
-    category: "system",
-    level: "info",
-    message: "Theme engine initialized with default settings",
-  },
+  // {
+  //   id: 4,
+  //   timestamp: "2025-04-20T10:16:02Z",
+  //   category: "system",
+  //   level: "info",
+  //   message: "Theme engine initialized with default settings",
+  // },
   {
     id: 5,
     timestamp: "2025-04-20T10:16:15Z",
@@ -61,20 +61,20 @@ const systemLogsData = [
     level: "info",
     message: "Connection established to external data source",
   },
-  {
-    id: 9,
-    timestamp: "2025-04-20T10:18:10Z",
-    category: "system",
-    level: "info",
-    message: "Content synchronization started",
-  },
-  {
-    id: 10,
-    timestamp: "2025-04-20T10:18:45Z",
-    category: "system",
-    level: "info",
-    message: "Content synchronization completed",
-  },
+  // {
+  //   id: 9,
+  //   timestamp: "2025-04-20T10:18:10Z",
+  //   category: "system",
+  //   level: "info",
+  //   message: "Content synchronization started",
+  // },
+  // {
+  //   id: 10,
+  //   timestamp: "2025-04-20T10:18:45Z",
+  //   category: "system",
+  //   level: "info",
+  //   message: "Content synchronization completed",
+  // },
   {
     id: 11,
     timestamp: "2025-04-20T10:19:15Z",
@@ -103,13 +103,13 @@ const systemLogsData = [
     level: "info",
     message: "System performance optimization complete",
   },
-  {
-    id: 15,
-    timestamp: "2025-04-20T10:21:00Z",
-    category: "system",
-    level: "info",
-    message: "Analytics data processed and cached",
-  },
+  // {
+  //   id: 15,
+  //   timestamp: "2025-04-20T10:21:00Z",
+  //   category: "system",
+  //   level: "info",
+  //   message: "Analytics data processed and cached",
+  // },
   {
     id: 16,
     timestamp: "2025-04-20T10:21:30Z",
@@ -138,13 +138,13 @@ const systemLogsData = [
     level: "info",
     message: "Message submitted via contact form",
   },
-  {
-    id: 20,
-    timestamp: "2025-04-20T10:23:45Z",
-    category: "system",
-    level: "info",
-    message: "Notification dispatched to admin channel",
-  },
+  // {
+  //   id: 20,
+  //   timestamp: "2025-04-20T10:23:45Z",
+  //   category: "system",
+  //   level: "info",
+  //   message: "Notification dispatched to admin channel",
+  // },
 ];
 
 interface SystemLogsModalProps {

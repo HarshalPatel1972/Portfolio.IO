@@ -133,6 +133,7 @@ const CommandInput = () => {
   }, [outputLines]);
 
   // Filter command suggestions as user types
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (command.trim() === "") {
       setSuggestions([]);
@@ -322,7 +323,7 @@ Access Level: 🔐 Top 1% Operator`,
             text: `Available platforms to connect to:
 ⦿ connect github - GitHub profile
 ⦿ connect linkedin - LinkedIn profile
-⦿ connect leetcode - LeetCode profile
+⦿ connect leetcode - CodeForces profile
 ⦿ connect email - Contact via email
 ⦿ connect resume - View resume`,
           },
@@ -333,16 +334,16 @@ Access Level: 🔐 Top 1% Operator`,
 
         switch (platform) {
           case "github":
-            url = "https://github.com/heatherdev";
+            url = "https://github.com/HarshalPatel1972";
             break;
           case "linkedin":
-            url = "https://linkedin.com/in/heatherdev";
+            url = "https://www.linkedin.com/in/harshal-patel-59b9a5278/";
             break;
           case "leetcode":
-            url = "https://leetcode.com/heatherdev";
+            url = "https://codeforces.com/profile/harshalpatel22";
             break;
           case "email":
-            url = "mailto:contact@heatherdev.com";
+            url = "mailto:hp842484n@gmail.com";
             break;
           case "resume":
             url = "/resume.pdf";
@@ -545,7 +546,6 @@ Access Level: 🔐 Top 1% Operator`,
           placeholder="Type a command... (try 'help')"
           spellCheck="false"
           autoComplete="off"
-          autoFocus
         />
         <button
           type="submit"

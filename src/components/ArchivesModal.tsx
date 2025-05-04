@@ -3,131 +3,230 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Sample resume data
 const resumeData = {
   education: [
     {
       id: 1,
-      degree: "Master of Computer Science",
-      institution: "Tech University",
-      year: "2023-2024",
-      details: "Specialized in Artificial Intelligence and Machine Learning",
-    },
-    {
-      id: 2,
-      degree: "Bachelor of Engineering",
-      institution: "Engineering College",
-      year: "2019-2023",
-      details: "Computer Science with honors",
+      degree:
+        "Bachelor of Engineering (B.E.) in Computer Science and Engineering (CSE) – Artificial Intelligence and Machine Learning",
+      institution: "Chandigarh University",
+      year: "2022–2026",
+      details: "Currently pursuing, with a CGPA of 8.91 (as of latest update)",
     },
   ],
   experience: [
     {
       id: 1,
-      role: "Senior Developer",
-      company: "TechCorp",
-      period: "2024-Present",
+      role: "Blockchain Project Lead",
+      company: "Independent / Hackathon Projects",
+      period: "2024–Present",
       highlights: [
-        "Led development of cloud-native applications",
-        "Implemented CI/CD pipelines",
-        "Mentored junior developers",
+        "Leading development of MedChain Authenticator for counterfeit medicine detection using blockchain and computer vision",
+        "Coordinated a multi-functional team and implemented secure verification systems",
+        "Working with Polygon testnet, Streamlit, CNN, and OCR technologies",
       ],
     },
     {
       id: 2,
-      role: "Full Stack Developer",
-      company: "WebSolutions",
-      period: "2022-2024",
+      role: "Intern – Full Stack Web Development",
+      company: "Metacourse (Remote)",
+      period: "2023",
       highlights: [
-        "Developed responsive web applications",
-        "Optimized database performance",
-        "Implemented authentication systems",
+        "Built and deployed dynamic websites using React, Node.js, and Express.js",
+        "Integrated third-party APIs and developed mobile-friendly interfaces",
+        "Participated in agile sprints and team code reviews",
       ],
     },
     {
       id: 3,
-      role: "Intern",
-      company: "StartupX",
-      period: "2021-2022",
+      role: "Intern – Data Science",
+      company: "Internshala (Remote)",
+      period: "2023",
       highlights: [
-        "Created interactive data visualizations",
-        "Assisted in UI/UX redesign",
-        "Contributed to open-source projects",
+        "Worked on data preprocessing, model training, and performance evaluation",
+        "Applied Python, Pandas, and machine learning concepts to real-world datasets",
+        "Completed certified training projects in ML pipelines",
       ],
     },
   ],
   certifications: [
     {
       id: 1,
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
+      name: "Certified Entry-Level JavaScript Programmer",
+      issuer: "Cisco",
       date: "2024",
-      credentialId: "AWS-123456",
+      credentialId: "JSE-CERT-CISCO",
     },
     {
       id: 2,
-      name: "Professional Scrum Master",
-      issuer: "Scrum.org",
+      name: "Machine Learning for All",
+      issuer: "University of London (via Coursera)",
       date: "2023",
-      credentialId: "PSM-789012",
+      credentialId: "",
     },
     {
       id: 3,
-      name: "TensorFlow Developer Certificate",
-      issuer: "Google",
+      name: "Introduction to Big Data with Spark and Hadoop",
+      issuer: "IBM",
       date: "2023",
-      credentialId: "TF-345678",
+      credentialId: "",
     },
     {
       id: 4,
-      name: "React Certification",
-      issuer: "Meta",
-      date: "2022",
-      credentialId: "REACT-901234",
+      name: "What is Data Science?",
+      issuer: "IBM",
+      date: "2023",
+      credentialId: "",
+    },
+    {
+      id: 5,
+      name: "Introduction to Big Data",
+      issuer: "University of San Diego",
+      date: "2023",
+      credentialId: "",
+    },
+    {
+      id: 6,
+      name: "Python Data Structures",
+      issuer: "University of Michigan (via Coursera)",
+      date: "2023",
+      credentialId: "",
+    },
+    {
+      id: 7,
+      name: "Applied Machine Learning in Python",
+      issuer: "University of Michigan",
+      date: "2023",
+      credentialId: "",
+    },
+    {
+      id: 8,
+      name: "Data Science Certification",
+      issuer: "Internshala",
+      date: "2023",
+      credentialId: "",
     },
   ],
   projects: [
     {
       id: 1,
-      name: "Neural Network Visualizer",
+      name: "Sitara",
       year: "2024",
       description:
-        "Interactive visualization tool for neural network architectures",
+        "Subscription-based content platform built using React, Tailwind, Stripe, and Email.js. Responsive for both mobile and web platforms.",
     },
     {
       id: 2,
-      name: "Task Management Platform",
-      year: "2023",
+      name: "MedChain Authenticator",
+      year: "2024–2025",
       description:
-        "Collaborative task management system with real-time updates",
+        "Counterfeit Ayurvedic medicine detection using computer vision, blockchain (Polygon testnet), and OCR. Built with Streamlit, Flask, and CNNs.",
     },
     {
       id: 3,
-      name: "Crypto Analytics Dashboard",
-      year: "2022",
-      description: "Data analytics platform for cryptocurrency market analysis",
+      name: "Attiro",
+      year: "2025",
+      description:
+        "AI-powered outfit matcher that suggests clothing combinations based on occasion and skin tone. Uses image uploads and prompt-based logic.",
+    },
+    {
+      id: 4,
+      name: "HealthView",
+      year: "2025",
+      description:
+        "Decentralized blockchain-based EHR system using Streamlit frontend, synthetic Aadhaar auto-fill, and smart contracts on the Polygon Amoy testnet.",
+    },
+    {
+      id: 5,
+      name: "Live Captions Research",
+      year: "2025",
+      description:
+        "Research project on multilingual live captions using real-time transcription and translation models.",
+    },
+    {
+      id: 6,
+      name: "FraudFence (Voice Fraud Detection)",
+      year: "2025 (Planned)",
+      description:
+        "Voice fraud detection using Twilio, DeepSpeech, and TensorFlow. Mobile-first design built with Flutter and Dart.",
+    },
+    {
+      id: 7,
+      name: "WiFi Merger",
+      year: "2025 (Planned)",
+      description:
+        "Tool to intelligently merge multiple WiFi network signals for stable connectivity and seamless transitions.",
+    },
+    {
+      id: 8,
+      name: "TheVSGame",
+      year: "2024",
+      description:
+        "Interactive multiplayer guessing game comparing random topics. Built with React and Firebase.",
+    },
+    {
+      id: 9,
+      name: "Music Plagiarism Detection",
+      year: "2024",
+      description:
+        "ML model to detect similarity between musical compositions. Focused on tempo, pitch, and frequency pattern analysis.",
+    },
+    {
+      id: 10,
+      name: "Handwritten Digit Recognition",
+      year: "2024",
+      description:
+        "ML model using CNNs to classify MNIST handwritten digits. Trained and tested using TensorFlow.",
     },
   ],
   skills: [
     {
       category: "Languages",
-      items: ["JavaScript", "TypeScript", "Python", "Java", "C#"],
+      items: ["C++", "Python", "SQL", "C", "C#", "Bash", "JavaScript"],
     },
     {
       category: "Frontend",
-      items: ["React", "Next.js", "Vue", "Angular", "Tailwind CSS"],
+      items: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
     },
     {
       category: "Backend",
-      items: ["Node.js", "Express", "Django", "ASP.NET", "Spring Boot"],
+      items: ["Node.js", "Express.js", "Flask"],
     },
     {
       category: "Database",
-      items: ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Firebase"],
+      items: ["MongoDB", "MySQL", "Firebase (basic)"],
     },
     {
-      category: "DevOps",
-      items: ["Docker", "Kubernetes", "AWS", "CI/CD", "Terraform"],
+      category: "DevOps & Tools",
+      items: [
+        "Git",
+        "GitHub",
+        "Streamlit",
+        "Email.js",
+        "Stripe",
+        "MetaMask",
+        "Hardhat",
+        "IPFS",
+        "Web3.py",
+      ],
+    },
+    {
+      category: "Machine Learning & AI",
+      items: [
+        "Python (scikit-learn, TensorFlow, CNNs)",
+        "OCR",
+        "Generative AI",
+      ],
+    },
+    {
+      category: "Blockchain",
+      items: [
+        "Solidity",
+        "Polygon (Amoy testnet)",
+        "Smart Contracts",
+        "IPFS",
+        "Pinata",
+      ],
     },
   ],
 };
@@ -151,10 +250,10 @@ export default function ArchivesModal({ isOpen, onClose }: ArchivesModalProps) {
           onClick={onClose}
         >
           <motion.div
-            className="bg-gray-900/95 border border-teal-700/50 rounded-xl w-full max-w-4xl max-h-[80vh] overflow-hidden shadow-xl glow"
+            className="bg-gray-900/95 border border-teal-700/50 rounded-xl w-full max-w-4xl h-[80vh] overflow-hidden flex flex-col shadow-xl glow"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
+            exit={{ scale: 1, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center p-4 border-b border-teal-900/50">
@@ -172,7 +271,31 @@ export default function ArchivesModal({ isOpen, onClose }: ArchivesModalProps) {
               </div>
             </div>
 
-            <div className="grid grid-cols-12 h-[calc(80vh-70px)]">
+            {/* Status row */}
+            {/* <div className="flex justify-around items-center p-2 border-b border-teal-900/30 bg-gray-800/50 text-sm text-teal-300">
+              <div className="flex items-center gap-1">
+                <span>🛠️</span>
+                <span>PROJECTS:</span>
+                <span className="font-bold text-white">10</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span>🚀</span>
+                <span>MISSION:</span>
+                <span className="font-bold text-white">Attiro</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span>🎮</span>
+                <span>SYSTEM:</span>
+                <span className="font-bold text-white">Clove Main</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span>📡</span>
+                <span>STATUS:</span>
+                <span className="font-bold text-white">Online</span>
+              </div>
+            </div> */}
+
+            <div className="grid grid-cols-12 flex-1 overflow-hidden">
               {/* Navigation sidebar */}
               <div className="col-span-3 bg-gray-900 border-r border-teal-900/30 p-2">
                 {[

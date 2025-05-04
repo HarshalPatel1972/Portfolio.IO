@@ -60,6 +60,7 @@ export default function CommandDashboard() {
           <ConsoleNav />
         </motion.div>
 
+        {/*
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,6 +69,7 @@ export default function CommandDashboard() {
         >
           <StatusFeed />
         </motion.div>
+        */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
